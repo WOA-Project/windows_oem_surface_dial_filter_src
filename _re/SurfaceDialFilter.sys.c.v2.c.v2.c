@@ -1,12 +1,12 @@
 __int64 qword_14000A890[2] = {-3689348818177884152i64, -3689348814741910324i64};
-_UNKNOWN unk_14000B1A0;
-_UNKNOWN unk_14000B1B0;
-_UNKNOWN unk_14000B1C0;
-unsigned __int16 word_14000B1F0[4] = {24u, 26u, 0u, 0u};
-unsigned __int16 word_14000B218[4] = {22u, 24u, 0u, 0u};
-unsigned __int16 word_14000B248[4] = {24u, 26u, 0u, 0u};
-unsigned __int16 word_14000B270[4] = {22u, 24u, 0u, 0u};
-_UNKNOWN unk_14000B290;
+_UNKNOWN unk_14000B1A0; // A2 AE 7F C1 33 2B 7F 4F B2 C8 57 35 A0 EC 88 0C
+_UNKNOWN unk_14000B1B0; // 8B BF 7A DA 97 B5 19 32 24 E7 C9 02 CF 52 46 2B
+_UNKNOWN unk_14000B1C0; // 30 B5 7F 73 A8 E6 8B 3F D8 57 44 50 86 27 34 B6
+unsigned __int16 word_14000B1F0[4] = {24u, 26u, 0u, 0u}; // "XPhysicalMax"
+unsigned __int16 word_14000B218[4] = {22u, 24u, 0u, 0u}; // "XLogicalMax"
+unsigned __int16 word_14000B248[4] = {24u, 26u, 0u, 0u}; // "YPhysicalMax"
+unsigned __int16 word_14000B270[4] = {22u, 24u, 0u, 0u}; // "YLogicalMax"
+_UNKNOWN GUID_DEVINTERFACE_HID = {4D1E55B2-F16F-11CF-88CB-001111000030}; // GUID_DEVINTERFACE_HID
 _UNKNOWN unk_14000B2C0;
 _UNKNOWN unk_14000B2D0;
 _UNKNOWN unk_14000B2E0;
@@ -2522,7 +2522,7 @@ __int64 __fastcall sub_14000597C(PVOID Context)
   v4 = IoRegisterPlugPlayNotification(
       EventCategoryDeviceInterfaceChange,
       1u,
-      &unk_14000B290,
+      &GUID_DEVINTERFACE_HID,
       *(PDRIVER_OBJECT *)(v3 + 8),
       (PDRIVER_NOTIFICATION_CALLBACK_ROUTINE)CallbackRoutine,
       Context,
